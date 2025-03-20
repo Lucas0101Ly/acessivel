@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Acessível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="menu-acessibilidade">
+        <button onclick="increaseFontSize()">A+</button>
+        <button onclick="decreaseFontSize()">A-</button>
+        <button onclick="toggleContrast()">Contraste</button>
+    </div>
+    
+    <main>
+        <section id="inicio">
+            <h1>Bem-vindo ao Site Acessível</h1>
+            <p>Shrek é uma animação icônica da DreamWorks lançada em 2001, que revolucionou o cinema infantil com seu humor irreverente e personagens inesquecíveis. O filme conta a história de um ogro rabugento que vive isolado em seu pântano até que sua tranquilidade é interrompida por uma invasão de criaturas mágicas. Para recuperar sua casa, ele faz um acordo com o ganancioso Lorde Farquaad e embarca em uma jornada ao lado do falante Burro para resgatar a princesa Fiona. </p>
+            <img src="burrosherek.jpeg" alt="Imagens retiradas do filme original da DreamWorks Sherek e suas sequências, https://www.adorocinema.com/filmes/filme-27415/creditos/>
+        </section>
+        
+        <section id="galeria">
+            <h2>Galeria</h2>
+            <img src="sherek2.jpeg" alt="Imagens retiradas do filme original da DreamWorks Sherek e suas sequências, https://www.adorocinema.com/filmes/filme-27415/creditos/>
+            <img src="sherek3.jpeg" alt="Imagens retiradas do filme original da DreamWorks Sherek e suas sequências, https://www.adorocinema.com/filmes/filme-27415/creditos/">
+        </section>
+        <p> Cheio de sátiras aos contos de fadas, trilha sonora marcante e uma mensagem poderosa sobre aceitação e amizade, Shrek conquistou todas as idades e se tornou um clássico da animação.
+        </p>
+        <p>o longo dos anos, Shrek se tornou mais do que um filme – virou um ícone da cultura pop. Com memes, referências em outras produções e até espetáculos musicais, a influência do ogro verde continua forte. Se você ainda não assistiu, ou se quer reviver essa aventura, não perca a chance de mergulhar novamente nesse mundo encantador e hilário.  
+
+            Explore nossa galeria, relembre cenas marcantes e aproveite este espaço feito especialmente para os fãs dessa incrível saga. Porque, no final das contas, quem disse que os ogros não podem ter finais felizes?</p>
+        <section id="contato">
+            <h2>Contato</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem"></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 - Site Acessível</p>
+    </footer>
+    
+    <script>
+        function increaseFontSize() {
+            document.body.style.fontSize = (parseFloat(getComputedStyle(document.body).fontSize) + 2) + 'px';
+        }
+        function decreaseFontSize() {
+            document.body.style.fontSize = (parseFloat(getComputedStyle(document.body).fontSize) - 2) + 'px';
+        }
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+    </script>
+</body>
+</html>
+
